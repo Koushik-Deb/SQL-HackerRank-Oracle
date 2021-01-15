@@ -1,0 +1,6 @@
+SELECT * 
+FROM (SELECT salary*months,count(1)
+     FROM Employee
+     GROUP BY (salary*months)
+     ORDER BY (salary*months) DESC)
+WHERE ROWNUM = 1;
